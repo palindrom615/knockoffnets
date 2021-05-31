@@ -66,7 +66,7 @@ def main():
     params = vars(args)
 
     # torch.manual_seed(cfg.DEFAULT_SEED)
-    if params['device_id'] >= 0:
+    if params['device_id'] > 0:
         os.environ["CUDA_VISIBLE_DEVICES"] = str(params['device_id'])
         device = torch.device('cuda')
     else:
