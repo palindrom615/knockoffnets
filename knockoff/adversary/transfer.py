@@ -113,7 +113,7 @@ def main():
     # parser.add_argument('--tau_classes', metavar='N', type=float, help='Frac. of classes to sample from Adv data',
     #                     default=1.0)
     # ----------- Other params
-    parser.add_argument('-d', '--device_id', metavar='D', type=int, help='Device id', default=0)
+    parser.add_argument('-d', '--device_id', metavar='D', type=int, help='Device id', default=-1)
     parser.add_argument('-w', '--nworkers', metavar='N', type=int, help='# Worker threads to load data', default=10)
     args = parser.parse_args()
     params = vars(args)
