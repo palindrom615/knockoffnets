@@ -104,7 +104,7 @@ def main():
     parser.add_argument('--budgets', metavar='B', type=str,
                         help='Comma separated values of budgets. Knockoffs will be trained for each budget.')
     # Optional arguments
-    parser.add_argument('-d', '--device_id', metavar='D', type=int, help='Device id. -1 for CPU.', default=0)
+    parser.add_argument('-d', '--device_id', metavar='D', type=int, help='Device id. -1 for CPU.', default=-1)
     parser.add_argument('-b', '--batch-size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
     parser.add_argument('-e', '--epochs', type=int, default=100, metavar='N',
