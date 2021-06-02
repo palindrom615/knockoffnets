@@ -1,4 +1,4 @@
-name: knockoff-test
+name: knockoff
 channels:
   - pytorch
   - nvidia
