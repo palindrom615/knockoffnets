@@ -3,8 +3,7 @@
 Replace this with a more detailed description of what this file contains.
 """
 import argparse
-from knockoff.adversary.adaptive import AdaptiveAdversary
-from knockoff.adversary.random import RandomAdversary
+from knockoff.adversary.policies import AdaptiveAdversary, RandomAdversary
 import os.path as osp
 import os
 import pickle
