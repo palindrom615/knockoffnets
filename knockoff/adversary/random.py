@@ -2,10 +2,6 @@
 """This is a short description.
 Replace this with a more detailed description of what this file contains.
 """
-import argparse
-import os.path as osp
-import os
-
 import numpy as np
 
 from tqdm import tqdm
