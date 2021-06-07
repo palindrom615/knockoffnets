@@ -3,6 +3,7 @@
 Replace this with a more detailed description of what this file contains.
 """
 import argparse
+from knockoff.adversary.adaptive import AdaptiveAdversary
 import os.path as osp
 import os
 import pickle
@@ -152,7 +153,7 @@ def main():
     if params['policy'] == 'random':
         adversary = RandomAdversary(blackbox, queryset, batch_size=batch_size)
     elif params['policy'] == 'adaptive':
-        raise NotImplementedError()
+        adversary = AdaptiveAdversary(blackbox, queryset, batch_size=batch_size, num_workers=nworkers)
     else:
         raise ValueError("Unrecognized policy")
 

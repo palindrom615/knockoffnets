@@ -30,10 +30,9 @@ __status__ = "Development"
 
 
 class AdaptiveAdversary(object):
-    def __init__(self, blackbox, queryset, out_path, batch_size=8, num_workers=15, flush_interval=1000):
+    def __init__(self, blackbox, queryset, batch_size=8, num_workers=15, flush_interval=1000):
         self.blackbox = blackbox
         self.queryset = queryset
-        self.out_path = out_path
         self.flush_interval = flush_interval
 
         self.n_queryset = len(self.queryset)
