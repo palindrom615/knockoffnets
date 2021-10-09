@@ -40,6 +40,13 @@ class Blackbox(object):
         self.__model.eval()
 
         self.__call_count = 0
+    
+    @classmethod
+    def from_torchvision(cls, model: nn.Module, device=None, output_type='probs'):
+        device = torch.device('cuda') if device is None else device
+        model = model.to(device)
+        blackbox = cls(model, device, output_type)
+        return blackbox
 
     @classmethod
     def from_modeldir(cls, model_dir, device=None, output_type='probs'):
