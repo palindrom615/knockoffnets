@@ -52,10 +52,10 @@ class AdaptiveAdversary(object):
 
                 img_t = [self.queryset.samples[i][0] for i in idxs]  # Image paths
                 x_t = torch.stack([self.queryset[i][0] for i in idxs]).to(self.blackbox.device)
-                y_t = self.blackbox(x_t).cpu()
+                y_t = self.blackbox(x_t)
 
                 for i in range(x_t.size(0)):
-                    self.transferset.append((img_t[i], y_t[i].cpu().squeeze()))
+                    self.transferset.append((img_t[i], y_t[i].squeeze()))
 
                 pbar.update(x_t.size(0))
 
